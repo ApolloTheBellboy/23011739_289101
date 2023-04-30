@@ -5,21 +5,92 @@
         <title>Layout 1</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="styles.css" />
 
         <style>
             *{ outline: white 8px solid}
 
+            /*colours*/
             .blue{
                 background-color: #3FB4FF;
-                height: 50px;
+                height: 70px;
+                margin-top:10px;
+            }
+
+            .green{
+                background-color: #A6D800;
+                
+            }
+
+            .orange{
+                background-color: #FFAE2E;
+                height: 200px;
+            }
+
+            .grey{
+                background-color: #C4C4C4;
+                height: 180px;
+            }
+
+            /*sm devices*/
+            @media (min-width: 576px){
+                .green{
+                    height: 140px;
+                }
+
+                .orange{
+                    height:210px;
+                }
+            }
+            /*md devices*/
+            @media (min-width: 768px){
+                .green{
+                    height: 210px;
+                }
+
+                .orange{
+                    height: 140px;
+                }
+
+                .grey{
+                    height:90px;
+                }
+            }
+            /*lg devices*/
+            @media (min-width: 992px){
+                .green{
+                    height: 280px;
+                }
+
+                .orange{
+                    height:210px;
+                }
+
+                .grey{
+                    height: 180px;
+                }
             }
         </style>
     </head>
     <body>
         <div class = "container">
             <div class="row">
-                <div class="col-lg-6 blue"></div>
-                <div class="col-lg-6 blue"></div>
+                <div class="col-mid-12 col-lg-6 blue"></div>
+                <div class="col-mid-12 col-lg-6 blue"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 green"></div>
+            </div>
+            <div class="row">
+                <div class="col-mid-12 col-lg-4 orange"></div>
+                <div class="col-mid-12 col-lg-4 orange"></div>
+                <div class="col-mid-12 col-lg-4 orange"></div>
+            </div>
+            <div class = "row">
+                <div class="d-none d-md-block col-mid-6 col-lg-3 grey"></div>
+                <div class="d-none d-md-block col-mid-6 col-lg-3 grey"></div>
+                <div class="d-none d-md-block col-mid-6 col-lg-3 grey"></div>
+                <div class="d-none d-md-block col-mid-6 col-lg-3 grey"></div>
             </div>
         </div>
     </body>
