@@ -32,8 +32,17 @@
                 height: 180px;
             }
 
+            /* xs devices */
+            body { 
+                background-color:darkred;
+            }
+
             /*sm devices*/
             @media (min-width: 576px){
+                body{
+                    background-color: darkorange;
+                }
+
                 .green{
                     height: 140px;
                 }
@@ -44,6 +53,10 @@
             }
             /*md devices*/
             @media (min-width: 768px){
+                body{
+                    background-color: gold;
+                }
+
                 .green{
                     height: 210px;
                 }
@@ -53,11 +66,15 @@
                 }
 
                 .grey{
-                    height:90px;
+                    height:60px;
                 }
             }
             /*lg devices*/
             @media (min-width: 992px){
+                body{
+                    background-color:darkgreen;
+                }
+
                 .green{
                     height: 280px;
                 }
@@ -70,16 +87,24 @@
                     height: 180px;
                 }
             }
+            /*xl devices*/
+            @media (min-width: 1200px) {
+                body{
+                    background-color: midnightblue;
+                }
+            }
         </style>
     </head>
     <body>
         <div class = "container">
             <div class="row">
-                <div class="col-mid-12 col-lg-6 blue"></div>
-                <div class="col-mid-12 col-lg-6 blue"></div>
+                <div class="col-12 col-lg-6 blue"></div>
+                <div class="col-12 col-lg-6 blue"></div>
             </div>
             <div class="row">
-                <div class="col-lg-12 green"></div>
+                <div class="col-12 green"></div>
+                <!--Note: if stays the same across sizes, 
+                    no need to define the size, as seen in solution-->
             </div>
             <div class="row">
                 <div class="col-mid-12 col-lg-4 orange"></div>
@@ -91,6 +116,9 @@
                 <div class="d-none d-md-block col-mid-6 col-lg-3 grey"></div>
                 <div class="d-none d-md-block col-mid-6 col-lg-3 grey"></div>
                 <div class="d-none d-md-block col-mid-6 col-lg-3 grey"></div>
+                <!--Although I verified that it looks the same as the solution,
+                for some reason they just dont line up in a grid at md sizefor me
+                and I have no clue why. lg works fine but not md-->
             </div>
         </div>
     </body>
