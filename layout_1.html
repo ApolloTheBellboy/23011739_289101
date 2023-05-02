@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="css/bootstrap.min.css" />
 
         <style>
-            *{ outline: white 8px solid}
+            *{ outline: black 8px solid}
 
             /*colours*/
             .blue{
@@ -28,7 +28,7 @@
 
             .grey{
                 background-color: #C4C4C4;
-                height: 180px;
+                height: 60px;
             }
 
             /* xs devices */
@@ -64,9 +64,6 @@
                     height: 140px;
                 }
 
-                .grey{
-                    height:60px;
-                }
             }
             /*lg devices*/
             @media (min-width: 992px){
@@ -106,18 +103,15 @@
                     no need to define the size, as seen in solution-->
             </div>
             <div class="row">
-                <div class="col-mid-12 col-lg-4 orange"></div>
-                <div class="col-mid-12 col-lg-4 orange"></div>
-                <div class="col-mid-12 col-lg-4 orange"></div>
+                <div class="col-md-12 col-lg-4 orange"></div>
+                <div class="col-md-12 col-lg-4 orange"></div>
+                <div class="col-md-12 col-lg-4 orange"></div>
             </div>
             <div class = "row">
-                <div class="d-none d-md-block col-mid-6 col-lg-3 grey"></div>
-                <div class="d-none d-md-block col-mid-6 col-lg-3 grey"></div>
-                <div class="d-none d-md-block col-mid-6 col-lg-3 grey"></div>
-                <div class="d-none d-md-block col-mid-6 col-lg-3 grey"></div>
-                <!--Although I verified that it looks the same as the solution,
-                for some reason they just dont line up in a grid at md sizefor me
-                and I have no clue why. lg works fine but not md-->
+                <div class="d-none d-md-block col-md-6 col-lg-3 grey"></div>
+                <div class="d-none d-md-block col-md-6 col-lg-3 grey"></div>
+                <div class="d-none d-md-block col-md-6 col-lg-3 grey"></div>
+                <div class="d-none d-md-block col-md-6 col-lg-3 grey"></div>
             </div>
         </div>
     </body>
