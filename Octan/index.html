@@ -7,12 +7,37 @@
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <div class="menu">
+        <div class= "nav">
             <a href = "index.html" class = "selected">Home</a>
             <a href = "products.html">Products</a>
             <a href = "instructions.html">Instructions</a>
             <a href = "about.html">About</a>
             <a href = "contact.html">Contact</a>
+        </div>
+        <div class = "banner">
+            <img src="img/city.webp">
+        </div>
+        <div class = "greeting">
+            <p id = "greetText"></p>
+
+            <script>
+                var day = new Date()
+                var curHr = day.getHours()
+
+                if (curHr >= 6 && curHr < 12){
+                    document.getElementById("greetText").innerHTML = 'Good Morning City!';
+                }
+                else if (curHr >= 12 && curHr < 17){
+                    document.getElementById("greetText").innerHTML = 'Good Afternoon City!';
+                }
+                else if (curHr >= 17 && curHr <20){
+                    document.getElementById("greetText").innerHTML = "Good Evening City!"
+                }
+                else{
+                    document.getElementById("greetText").innerHTML = 'Goodnight City!';
+                }
+            </script>
+            <!--this script is modified from one I found on stack overflow. link is in the planning document.-->
         </div>
     </body>
 </html>

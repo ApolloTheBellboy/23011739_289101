@@ -1,3 +1,23 @@
+*{
+    outline: 1px solid red;
+}
+
+body{
+    margin: 0;
+}
+
 .selected{
     font-weight: bold;
+}
+
+.nav{
+    background-color: #FFC500;
+    width: 30%;
+    height: auto;
+    float:left;
+}
+
+.banner{
+    width: auto;
+    float: right;
 }
