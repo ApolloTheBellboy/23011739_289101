@@ -4,40 +4,57 @@
         <meta charset="utf-8" />
         <title>Home</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400&family=Noto+Sans&family=Press+Start+2P&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <div class= "nav">
-            <a href = "index.html" class = "selected">Home</a>
-            <a href = "products.html">Products</a>
-            <a href = "instructions.html">Instructions</a>
-            <a href = "about.html">About</a>
-            <a href = "contact.html">Contact</a>
+        <div class = "container">
+            <!--Navigation Menu-->
+            <div class="nav">
+                <img class="logo" src="img/logo.webp">
+                <!--Menu-->
+                <a href = "index.html" class = "selected">Home</a>
+                <hr> <!--separaty-doo-->
+                <a href = "products.html">Products</a>
+                <a href = "instructions.html">Instructions</a>
+                <a href = "about.html">About</a>
+                <a href = "contact.html">Contact</a>
+                <!--Note: need to figure out how to make Contact stick to bottom-->
+            </div>
+            <div class="mainBlock">
+            <!--Banner-->
+                <img class="banner" src="img/city.webp">
+            <!--Good Morning City!-->
+                <div class = "greeting">
+                    <p id = "greetText"></p>
+        
+                    <script>
+                        var day = new Date()
+                        var curHr = day.getHours()
+        
+                        if (curHr >= 6 && curHr < 12){
+                            document.getElementById("greetText").innerHTML = 'Good Morning City!';
+                        }
+                        else if (curHr >= 12 && curHr < 17){
+                            document.getElementById("greetText").innerHTML = 'Good Afternoon City!';
+                        }
+                        else if (curHr >= 17 && curHr <20){
+                            document.getElementById("greetText").innerHTML = "Good Evening City!"
+                        }
+                        else{
+                            document.getElementById("greetText").innerHTML = 'Goodnight City!';
+                        }
+                    </script>
+                    <!--this script is modified from one I found on stack overflow. link is in the planning document.-->
+                    <!--end of greeting-->
+                    <hr>
+                </div>
+                <!--footer-->
+                
+            </div>
+            
         </div>
-        <div class = "banner">
-            <img src="img/city.webp">
-        </div>
-        <div class = "greeting">
-            <p id = "greetText"></p>
-
-            <script>
-                var day = new Date()
-                var curHr = day.getHours()
-
-                if (curHr >= 6 && curHr < 12){
-                    document.getElementById("greetText").innerHTML = 'Good Morning City!';
-                }
-                else if (curHr >= 12 && curHr < 17){
-                    document.getElementById("greetText").innerHTML = 'Good Afternoon City!';
-                }
-                else if (curHr >= 17 && curHr <20){
-                    document.getElementById("greetText").innerHTML = "Good Evening City!"
-                }
-                else{
-                    document.getElementById("greetText").innerHTML = 'Goodnight City!';
-                }
-            </script>
-            <!--this script is modified from one I found on stack overflow. link is in the planning document.-->
-        </div>
+        <div class="footer"></div>
+        
     </body>
 </html>
