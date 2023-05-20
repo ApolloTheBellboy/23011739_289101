@@ -2,8 +2,12 @@
     outline: 1px solid red;
 }
 
+/*GENERAL*/
 body{
     margin: 0;
+}
+.container{
+    margin: 0px;
 }
 
 .selected{
@@ -11,13 +15,104 @@ body{
 }
 
 .nav{
+    padding: 15px;
     background-color: #FFC500;
-    width: 30%;
+}
+
+.nav a{
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    font-size: 2em;
+    color: black;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.logo{
     height: auto;
-    float:left;
+    width: 75px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+hr{
+    height: 4px;
+    border-width: 0;
+    color: #49090C;
+    background-color: #49090C;
 }
 
 .banner{
-    width: auto;
-    float: right;
+    width: 100%;
+}
+
+.footer{
+    width: 100%;
+    height: 200px;
+    background-color: #FFC500;
+    margin-top: auto;
+}
+
+/*HOME*/
+.greeting{
+    font-family: 'Exo 2', sans-serif;
+    padding: 10px;
+}
+
+/* sm */
+@media (min-width: 576px){
+    .nav{
+        height: auto;
+        width: 100%;
+        text-align: center;
+    }
+
+    .greeting{
+        font-size: 3em;
+        text-align: center;
+    }
+}
+
+/* md */
+@media (min-width: 768px){
+
+}
+
+/* lg */
+@media (min-width: 992px){
+    .container{
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+    }
+
+    .nav{
+        height: auto;        
+        max-width: 200px;
+    }
+
+    .nav a{
+        display: block;
+        text-align: left;
+        font-size: 1.5em;
+    }
+
+    .greeting{
+        font-size: 2.5em;
+        text-align: left;
+    }
+}
+
+/* xl */
+@media (min-width: 1200px){
+    .nav{
+        max-width: 250px;
+    }
+
+    .nav a{
+        
+    }
+
+    .footer{
+        height: 250px;
+    }
 }
