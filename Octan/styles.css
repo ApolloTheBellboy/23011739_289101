@@ -4,7 +4,7 @@
 
 /*GENERAL*/
 body{
-    margin: 0;
+    margin: 0px;
 }
 .container{
     margin: 0px;
@@ -15,7 +15,7 @@ body{
 }
 
 .nav{
-    padding: 15px;
+    
     background-color: #FFC500;
 }
 
@@ -24,8 +24,13 @@ body{
     text-decoration: none;
     font-size: 2em;
     color: black;
-    padding: 5px;
-    margin-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+
+.nav hr{
+    display: none;
 }
 
 .logo{
@@ -33,6 +38,9 @@ body{
     width: 75px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    outline: 2px solid #49090C;
 }
 
 hr{
@@ -44,6 +52,7 @@ hr{
 
 .banner{
     width: 100%;
+    height: auto;
 }
 
 .footer{
@@ -67,6 +76,12 @@ hr{
         text-align: center;
     }
 
+    .nav a{
+        display: inline;
+        margin-bottom: auto;
+        
+    }
+
     .greeting{
         font-size: 3em;
         text-align: center;
@@ -82,28 +97,43 @@ hr{
 @media (min-width: 992px){
     .container{
        display: grid;
-       grid-template-columns: 1fr 1fr;
+       grid-template-columns: auto auto;
     }
 
     .nav{
         height: auto;        
-        max-width: 200px;
+        width: 200px;
     }
 
     .nav a{
         display: block;
         text-align: left;
         font-size: 1.5em;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .nav hr{
+        display: block;
+        margin: 10px;
+        height: 4px;
+        color:#49090C;
+        background-color: #49090C;
     }
 
     .greeting{
         font-size: 2.5em;
         text-align: left;
     }
+
 }
 
 /* xl */
 @media (min-width: 1200px){
+    .container{
+        display: grid;
+        grid-template-columns: auto auto;
+     }
     .nav{
         max-width: 250px;
     }
@@ -114,5 +144,9 @@ hr{
 
     .footer{
         height: 250px;
+    }
+
+    .logo{
+        width: 90px;
     }
 }
