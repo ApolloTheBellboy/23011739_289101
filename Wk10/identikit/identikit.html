@@ -72,12 +72,12 @@
 
     <script>
         // coordinate variables
-        var eye_left_x = 100;
+        var eye_left_x = 30;
         var eye_left_y = 100;
-        var eye_right_x = 250;
+        var eye_right_x = 320;
         var eye_right_y = 100;
         var mouth_x = 100;
-        var mouth_y = 250;
+        var mouth_y = 140;
 
         // set initial positions
         document.getElementById('eye_left').style.left = eye_left_x + 'px';
@@ -121,8 +121,67 @@
 
         //hollow eyes
         document.getElementById('eyes_hollow_btn').addEventListener('click', () => {
-            
-        })
+            document.getElementById('eye_left').src="eye_hollow.svg";
+            document.getElementById('eye_right').src="eye_hollow.svg";
+        //found out how to do it on this website https://linuxhint.com/change-image-source-javascript/
+        });
+
+        //solid eyes
+        document.getElementById('eyes_solid_btn').addEventListener('click', () => {
+            document.getElementById('eye_left').src="eye_solid.svg";
+            document.getElementById('eye_right').src="eye_solid.svg";
+        });
+
+        //no right eye
+        document.getElementById('cyclops_btn').addEventListener('click', () => {
+            document.getElementById('eye_right').style.display='none';
+        //I had an idea of what this one would need me to do, btu I found the exact syntax
+        // here: https://stackoverflow.com/questions/6802683/js-how-to-remove-image-with-javascript
+        });
+
+        //mouth up
+        document.getElementById('mouth_up_btn').addEventListener('click', () => {
+            mouth_y -= 10;
+            document.getElementById('mouth').style.top = mouth_y + 'px';
+        });
+
+        //mouth down
+        document.getElementById('mouth_down_btn').addEventListener('click', () => {
+            mouth_y += 10;
+            document.getElementById('mouth').style.top = mouth_y + 'px';
+        });
+
+        //happy mouth
+        document.getElementById('mouth_happy_btn').addEventListener('click', () => {
+            document.getElementById('mouth').src="mouth_happy.svg";
+        });
+
+        //sad mouth
+        document.getElementById('mouth_sad_btn').addEventListener('click', () => {
+            document.getElementById('mouth').src="mouth_sad.svg";
+        });
+
+        //reset
+        document.getElementById('reset_btn').addEventListener('click', () => {
+        //left eye
+        eye_left_x = 30;
+        document.getElementById('eye_left').style.left = eye_left_x + 'px';
+        eye_left_y = 100;
+        document.getElementById('eye_left').style.top = eye_left_y + 'px';
+        document.getElementById('eye_left').src="eye_solid.svg";
+        //right eye
+        eye_right_x = 320;
+        document.getElementById('eye_right').style.left = eye_right_x + 'px';
+        eye_right_y = 100;
+        document.getElementById('eye_right').style.top = eye_right_y + 'px';
+        document.getElementById('eye_right').src="eye_solid.svg";
+        //mouth
+        mouth_x = 100;
+        document.getElementById('mouth').style.left = mouth_x + 'px';
+        mouth_y = 140;
+        document.getElementById('mouth').style.top = mouth_y + 'px';
+        document.getElementById('mouth').src="mouth_happy.svg";
+        });
     </script>
 
 </body>
