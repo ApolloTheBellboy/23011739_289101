@@ -10,14 +10,13 @@ body{
     margin: 0px;
 }
 
-.selected{
-    font-weight: bold;
-}
+
 
 /*Nav Bar*/
 .nav{
     display: inline-flex;
     background-color: #FFC500;
+    
 }
 
 .nav a{
@@ -32,6 +31,19 @@ body{
     margin-top:auto;
     margin-bottom: auto;
 }
+
+.nav a:hover{
+    background-color: #cf752a;
+    
+}
+
+.nav #selected{
+    /*found an answer to getting the hierarchy right here: https://www.w3docs.com/snippets/css/how-to-override-css-styles.html*/
+    background-color: #BE1D24;
+    color: white;
+}
+
+
 
 .nav hr{
     display: none;
@@ -71,6 +83,13 @@ hr{
     margin-top: auto;
 }
 
+.pageTitle{
+    font-family: 'Exo 2', sans-serif;
+    font-size: 3em;
+    padding: 10px;
+    text-align: left;
+}
+
 /*HOME*/
 .greeting{
     font-family: 'Exo 2', sans-serif;
@@ -78,6 +97,33 @@ hr{
     padding: 10px;
     text-align: center;
 }
+
+/*Instructions*/
+.instrBar{
+    display:grid;
+    grid-template-columns: 40% 60%;
+    padding: 15px;
+}
+
+.instrBar img{
+    height:auto;
+    width: 100%;
+}
+
+.instrNav a{
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    padding: 15px;
+    font-size: 1.25em;
+    
+}
+ .instrNav a:hover{
+    background-color: #237935;
+    color: white;
+ }
 
 /* sm */
 @media (min-width: 576px){
