@@ -1,4 +1,4 @@
-*{
+/*{
     outline: 1px solid red;
 }
 
@@ -28,8 +28,7 @@ body{
     padding-right: 20px;
     padding-bottom: 5px;
     padding-top: 5px;
-    margin-top:auto;
-    margin-bottom: auto;
+    width: auto;
 }
 
 .nav a:hover{
@@ -38,7 +37,7 @@ body{
 }
 
 .nav #selected{
-    /*found an answer to getting the hierarchy right here: https://www.w3docs.com/snippets/css/how-to-override-css-styles.html*/
+    /*found an answer to*/
     background-color: #BE1D24;
     color: white;
 }
@@ -101,30 +100,53 @@ hr{
 /*Instructions*/
 .instrBar{
     display:grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 1fr 1fr;
     padding: 15px;
-}
 
-.instrBar img{
-    height:auto;
-    width: 100%;
 }
-
 .instrNav a{
-    display: block;
-    width: 100%;
+    display: flex;
     text-decoration: none;
     color: black;
     font-family: 'Roboto', sans-serif;
     padding: 15px;
     font-size: 1.25em;
-    
 }
+.instrNav{
+    width:auto;
+    display: block;
+}
+
+.instrBar img{
+    height:100%;
+    width:100%;
+}
+
+
  .instrNav a:hover{
     background-color: #237935;
     color: white;
  }
 
+.instrNav .icon{
+    height: 20px;
+    width:auto;
+    margin-top:auto;
+    margin-bottom:auto;
+    margin-left:auto;
+}
+
+a:hover .icon{
+    content: url("img/arrow-white.svg");
+    /*found solution thanks to stack overflow:
+    https://stackoverflow.com/questions/52365130/to-change-icon-and-text-color-of-button-on-mouse-hover-in-menu-component*/
+}
+
+.instrNav hr{
+    height: 1px;
+    background-color:lightgray;
+    margin:0;
+}
 /* sm */
 @media (min-width: 576px){
     .nav{
