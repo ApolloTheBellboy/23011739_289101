@@ -1,8 +1,8 @@
 
-*{outline: 1px solid red;}
+/*{outline: 1px solid red;}
 
 
-/*GENERAL*/
+/*========= GENERAL =========*/
 body{
     margin: 0px;
     
@@ -10,16 +10,17 @@ body{
 .container{
     margin: 0px;
     height: 100vh;
+    width:auto;
     display:grid;
-    grid-template-rows: auto auto 200px;
+    grid-template-rows: 70px auto 200px;
 }
 
 /*hr*/
-.maroon{
+.red{
     height: 4px;
     border-width: 0;
-    color: #49090C;
-    background-color: #49090C;
+    color: #BE1D24;
+    background-color: #BE1D24;
 }
 
 .grey{
@@ -27,6 +28,13 @@ body{
     border-width: 0;
     background-color:lightgray;
     margin:0;
+}
+
+.maroon{
+    height: 2px;
+    border-width: 0;
+    color: #49090C;
+    background-color: #49090C;
 }
 
 /*Nav Bar*/
@@ -48,18 +56,18 @@ body{
     display: inline;
     padding-left: 20px;
     padding-right: 20px;
-    padding-bottom: 5px;
-    padding-top: 5px;
+    padding-bottom: 20px;
+    padding-top: 20px;;
     width: auto;
 }
 
 .nav a:hover{
-    background-color: #e07e2e;
+    background-color: #ff7f17;
     
 }
 
 .nav #selected{
-    /*found an answer to*/
+    
     background-color: #BE1D24;
     color: white;
 }
@@ -99,7 +107,10 @@ body{
 .pageTitle{
     font-family: 'Exo 2', sans-serif;
     font-size: 3em;
-    padding: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom:15px;
     text-align: left;
 }
 
@@ -116,7 +127,18 @@ p2{
     font-weight: 300;
 }
 
-/*HOME*/
+.mainBlock .maroon{
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.spacer{
+    margin:20px;
+}
+
+/*========= HOME =========*/
 .greeting{
     font-family: 'Exo 2', sans-serif;
     font-size: 3em;
@@ -124,7 +146,11 @@ p2{
     text-align: center;
 }
 
-/*INSTRUCTIONS*/
+.greeting p{
+    padding-left: 20px;
+}
+
+/*========= INSTRUCTIONS =========*/
 
 .instrNav a{
     display: flex;
@@ -151,12 +177,11 @@ p2{
  }
 
 .instrNav .icon{
-    height: 20px;
+    height: 30px;
     width:auto;
     margin-top:auto;
     margin-bottom:auto;
     margin-left:auto;
-    padding-left:15px;
 }
 
 a:hover .icon{
@@ -178,7 +203,7 @@ a:hover .icon{
 }
 
 .ad p1{
-    padding-right: 20px;
+    padding-right: 15px;
 }
 
 .ad .text{
@@ -187,14 +212,15 @@ a:hover .icon{
 
 .ad{
     padding: 15px;
-    padding-left: 30px;
+    padding-left: 25px;
     padding-bottom: 30px;
 }
 
 .buyButton{
     margin-left: auto;
     margin-right:auto;
-    margin-top: 30px;
+    margin-top: auto;
+    margin-bottom:auto
 }
 
 .buyButton a{
@@ -209,11 +235,11 @@ a:hover .icon{
     background-color: #53b62d;
 }
 
-/*PRODUCTS*/
+/*========= PRODUCTS =========*/
 
 .productNav img{
-    height: 300px;
-    width: 576px;
+    height: auto;
+    width: auto;
     object-fit: cover;
 }
 
@@ -221,11 +247,13 @@ a:hover .icon{
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     color: black;
-    font-size: 1.25em;
+    font-size: 1.5em;
+    text-align: center;
 }
 
 .productNav p{
     padding: 15px;
+    margin-top:-5px; /*I don't know why, i WANT to know why, but it just wont align properly unless i do this bs T-T*/
 }
 
 .productNav a:hover p{
@@ -237,40 +265,153 @@ a:hover .icon{
     opacity: 75%;
 }
 
-/*ABOUT*/
+.productNav .grey{
+    margin-top: -24px;
+    margin-bottom:15px;
+}
 
-/*CONTACT*/
+/*========= ABOUT =========*/
 
+.aboutBlock p1{
+    font-weight:400;
+}
 
-/* sm */
+.aboutBlock hr{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.aboutBlock p{
+    display: inline;
+    font-family: 'Roboto', sans-serif;
+}
+
+.aboutBlock img{
+    width: 100%;
+    height:auto;
+}
+
+.aboutA img{
+    width: 100%;
+    height: auto;
+}
+
+.aboutA p{
+    width:100%;
+    text-align:center;
+    font-family: 'Exo 2', 'sans-serif';
+    font-size: 2em;
+    margin-left:auto;
+    margin-right:auto;
+    color:#49090C;
+}
+
+.aboutBlock .text{
+    padding:15px;
+}
+
+/*========= CONTACT =========*/
+
+.contactBlock{
+    margin-left:20px;
+    margin-right:20px;
+    padding-bottom:15px;
+}
+
+.contactBlock .grey{
+    margin-top:15px;
+    margin-bottom:15px;
+    width: 75%;
+}
+
+.contactBlock p{
+    font-family: 'Roboto', sans-serif;
+    display: inline;
+}
+
+.report{
+    display: block;
+    margin: 20px;
+}
+
+.report hr{
+    width: 90%;
+    margin-top:15px;
+}
+
+.report img{
+    width: 100%;
+    height: auto;
+}
+
+.report p{
+    font-family: 'Roboto', sans-serif;
+}
+
+p3{
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.25em;
+    color:#49090C;
+}
+
+.report .button{
+    margin-left: auto;
+    margin-right:auto;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.report a{
+    text-decoration: none;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 1.25em;
+    color: white;
+    background-color: #BE1D24;
+    padding: 15px;
+}
+
+.report a:hover{
+    background-color: #ff4f1a;
+}
+
+.report text{
+    display: block;
+}
+/*========= sm =========*/
 @media (min-width: 576px){
     .productNav img{
-        height: auto;
-        width: auto;
-        max-width: 384px;
+        width:100%;
+        height: 200px;
+    }
+    .productNav a{
+        width:97%;
     }
     .productNav{
-        display: grid;
+        display:grid;
         grid-template-columns: auto auto;
         padding:15px;
     }
 }
 
-/* md */
+/*========= md =========*/
 @media (min-width: 768px){
     .productNav img{
-        width:495px;
-        height: 350px;
+        width:100%;
+        height: 280px;
+    }
+
+    .buyButton{
+        margin-top: 30px;
     }
 }
 
-/* lg */
+/*========= lg =========*/
 @media (min-width: 992px){
     /*General*/
     .container{
        display: grid;
        grid-template-columns: auto auto;
-       grid-template-rows: auto auto 200px;
+       grid-template-rows: auto 200px;
     }
 
     .nav{
@@ -328,18 +469,58 @@ a:hover .icon{
         grid-template-columns: auto auto;
     }
 
+    .instrNav .icon{
+        height: 20px;
+    }
+
+    /*About*/
+    .aboutBlock{
+        display: grid;
+        grid-template-columns: auto auto;
+        margin:15px;
+    }
+
+    .aboutBlock p{
+        font-size: 1em;
+    }
+
     /*Products*/
     .productNav{
         display: grid;
         grid-template-columns: auto auto auto;
+
+    }
+
+    .productNav a{
+        font-size: 1.25em;
+        text-align: left;
     }
 
     .productNav img{
-        
+        height: 200px;
+    }
+
+    .productNav .grey{
+    margin-top: -20px;
+    }
+
+    /*Contact*/
+    .contactBlock{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .contactBlock .maroon{
+        display:none;
+    }
+
+    .report{
+        display: grid;
+        grid-template-columns: auto auto;
+        margin-left:15px;
     }
 }
 
-/* xl */
+/*========= xl =========*/
 @media (min-width: 1200px){
     .container{
         display: grid;
